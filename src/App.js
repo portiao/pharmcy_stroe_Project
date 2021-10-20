@@ -1,8 +1,9 @@
 import "./App.css";
 
 // 引入page
-import PHeader from "./pages/PHeader/PHeader";
-import PopularProduct from "./pages/PopularProductPage/PopularProduct";
+import PHeader from "./pages/PHeader/PHeader"; //header
+import PopularProduct from "./pages/PopularProductPage/PopularProduct";//熱門商品輪播
+import NewsPage from "./pages/Newsnews/NewsPage"; //最新消息
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <PHeader />
       </div>
       <PopularProduct />
+      <NewsPage/>
     </div>
   );
 }

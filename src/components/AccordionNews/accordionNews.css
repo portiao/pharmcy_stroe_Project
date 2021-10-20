@@ -1,0 +1,55 @@
+.accordion {
+width: 750px;
+margin: 0px auto;
+/* border: 1px solid #ccc; */
+}
+.title {
+padding: 26.2px;
+font-size: 22px;
+/* font-weight: bold; */
+background: #EEF7FC;
+border-top: 1px solid #fff;
+
+}
+.content-box {
+
+background-color: white;
+padding: 0px 10px;
+overflow: hidden;
+height: 0px;
+transition: .5s;
+
+}
+
+.newBox{
+    margin: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.newBox p{
+    font-size: 18px;
+    padding: 10px;
+    max-width: auto;
+    margin: 0 30px;
+}
+
+@media screen and (max-width: 375px) {
+    .accordion {
+        width: 350px;
+        }
+        .title {
+            padding: 15px 2px;
+            font-size: 8px;
+        }
+        .newBox{
+            margin: 10px 10px;
+        }
+        .newBox p{
+            font-size: 8px;
+            padding: 8px;
+            
+            margin: 0 5px;
+        }
+
+}

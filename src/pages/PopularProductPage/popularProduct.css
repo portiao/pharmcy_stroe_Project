@@ -29,12 +29,7 @@
 }
 
 
-/*雲*/
-.bgColorProduct .cloud{
-    
-    
-}
-
+/*雲動畫*/
 @keyframes cloud {
     0%{
         background-position-x:  0rem;
@@ -70,7 +65,7 @@
     animation: cloud 10s linear infinite;
     opacity: .8;
     height: 20rem;
-    background-size: reverse;
+    background-size: cover;
     animation-duration: 13s;
 }
 
