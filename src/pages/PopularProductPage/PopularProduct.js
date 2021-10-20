@@ -41,6 +41,7 @@ export default class PopularProduct extends Component {
           breakpoint: 1150,
           settings: {
             slidesToShow: 2, //一次顯示2個
+            dots: true,
           },
         },
         {
@@ -48,7 +49,7 @@ export default class PopularProduct extends Component {
           breakpoint: 800,
           settings: {
             slidesToShow: 1, //一次顯示1個
-            dots:true,
+            dots: true,
           },
         },
       ],
@@ -64,8 +65,8 @@ export default class PopularProduct extends Component {
             <NewPopularProduct />
             <NewPopularProduct />
           </Slider>
-          <div className="cloud cloud-1"></div>
-          <div className="cloud cloud-2"></div>
+          <div style={{backgroundImage: `url(http://localhost:3000/images/photo/cloud.png)`}}  className="cloud cloud-1"></div>
+          <div style={{backgroundImage: `url(http://localhost:3000/images/photo/cloud.png)`}}  className="cloud cloud-2"></div>
         </div>
       </>
     );

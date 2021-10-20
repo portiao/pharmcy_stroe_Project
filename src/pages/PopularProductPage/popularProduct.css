@@ -31,14 +31,53 @@
 
 /*雲*/
 .bgColorProduct .cloud{
-    position: absolute;
-    bottom: 0;
+    
+    
+}
+
+@keyframes cloud {
+    0%{
+        background-position-x:  0rem;
+    }
+    100%{
+        background-position-x:  -250rem;
+    }
+    
+}
+
+.cloud-1{
+    position: relative;
+    bottom: 130px;
     right: 0;
     left: 0;
     height: 18rem;
     background-size: 250rem 18rem;
-    background:url();
+    /*infinite 動畫一直撥放*/
+    animation: cloud 10s linear infinite;
+    opacity: .6;
+    height: 20rem;
+    background-size: reverse;
+    animation-duration: 10s;
 }
+.cloud-2{
+    position: relative;
+    bottom: 320px;
+    right: 0;
+    left: 0;
+    height: 18rem;
+    background-size: 250rem 18rem;
+    /*infinite 動畫一直撥放*/
+    animation: cloud 10s linear infinite;
+    opacity: .8;
+    height: 20rem;
+    background-size: reverse;
+    animation-duration: 13s;
+}
+
+
+
+
+
 
 
 
@@ -53,5 +92,4 @@
     }
    
 }
-
 
