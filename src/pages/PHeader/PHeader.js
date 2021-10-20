@@ -7,9 +7,10 @@ import "./pHeader.css";
 import AirQuality from "../../components/AirQ/AirQuality"; //空氣品質
 import ActivePage from "../../components/ActivePage/ActivePage"; //活動頁籤
 
+
 function PHeader() {
   return (
-    <div>
+    <div className="headerBack">
       <div className="changeSpace">
         <img
           className="indexbanner"
@@ -22,6 +23,7 @@ function PHeader() {
       <div className="rightBox">
         <AirQuality />
       </div>
+    
     </div>
   );
 }

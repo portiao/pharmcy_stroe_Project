@@ -41,6 +41,7 @@
 .activeLine2{
     /* padding-bottom: 20px; */
     cursor: pointer;
+    padding-top: 20px;
 }
 
 
@@ -56,8 +57,11 @@
         padding: 0;
         margin: 0;
     }
-    .activeP1, .activeP2{
-        padding: 0;
+    .activeP1{
+        padding-bottom: 5px;
+    }
+    .activeP2{
+        padding-top: 5px;
     }
     .active {
         border-radius: 5px;

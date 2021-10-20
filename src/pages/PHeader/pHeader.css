@@ -42,8 +42,10 @@
     bottom: 100px;
 }
 
-
-
+/*把header設定為一組*/
+.headerBack{
+    display: flex;
+}
 
 
 
@@ -54,9 +56,6 @@
       float: none;
       position: static;
     }
-}
-
-@media  screen and (max-width:375px) {
     /* banner圖尺寸 */
     .indexbanner{
         border-radius: 80px 30px 50px 30px ;
@@ -65,6 +64,13 @@
     .changeSpace{
         padding: 0 10px;
     }
+    /*手機板商品頁*/
+    .headerBack{
+        display: block;
+      }
+}
+
+@media  screen and (max-width:375px) {
     /* 空氣品質 */
     .rightBox{
         display: flex;
@@ -72,6 +78,4 @@
         float: none;
         position: static;
     }
-   
-
 }
