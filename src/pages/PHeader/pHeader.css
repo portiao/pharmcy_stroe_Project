@@ -1,0 +1,77 @@
+/*避免出現滾軸*/
+:root {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+/* banner圖尺寸 */
+.indexbanner{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 200px 80px 200px 80px ;
+    z-index: 0;
+}
+/*banner邊距*/
+.changeSpace{
+    padding: 0 30px;
+}
+
+
+/* rightBox設定 */
+.rightBox{
+    display: block;
+    float:right;/* 向右 */
+    overflow:auto;/* 當區塊內容超過區塊大小，自動出現捲軸 */
+    height:140px;  /* 佔頁面高度 100%，但內容不夠多時仍不會以滿版面呈現 */
+    padding: 0px 0px 0px 26px;/* 區塊內的留白*/
+    width: 280px;/* 區塊寬度，會跟位移值有相對的關連 */
+    z-index: 99999;/* z-index 值設大，以最上層方式顯示在頁面 */
+    position:fixed;
+    right:-225px;/* 頁面初始的偏移值，基本上會設成跟 width 相同 */
+    top:10%;/* 區塊距離頂部的相對位置，0% 是貼齊頂部 */
+    bottom:0%;/* 區塊距離底部的相對位置，0% 是貼齊底部 */
+}
+
+/*活動跳頁*/
+.activeMove{
+    z-index: 1;
+    display: block;
+    float: right;
+    position: relative;
+    bottom: 100px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 820px) {
+    .activeMove {
+      display: flex;
+      justify-content: space-around;
+      float: none;
+      position: static;
+    }
+}
+
+@media  screen and (max-width:375px) {
+    /* banner圖尺寸 */
+    .indexbanner{
+        border-radius: 80px 30px 50px 30px ;
+    }
+    /*banner邊距*/
+    .changeSpace{
+        padding: 0 10px;
+    }
+    /* 空氣品質 */
+    .rightBox{
+        display: flex;
+        justify-content: space-around;
+        float: none;
+        position: static;
+    }
+   
+
+}
