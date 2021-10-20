@@ -43,10 +43,15 @@ const AccordionItem = (props) => {
         : 0
     );
   });
-  const { item, index, setVisable } = props;
+  //增加visable
+  const { item, index, setVisable, visable } = props;
   return (
     <div className="accordion-item" onClick={() => setVisable(index)}>
-      <div className="title">{item.title}</div>
+      <div className="title">
+        <div>{item.title}</div>
+        {/* 檢查是否被打開 */}
+        <div className={visable ? 'focus' : 'unfocus'}></div>
+      </div>
       <div
         className="content-box"
         style={{ height: heightItem }}
@@ -70,6 +75,7 @@ const Accordion = () => {
     <div className="accordion">
       {data.map((item, index) => {
         return (
+         
           <AccordionItem
             item={item}
             key={index}

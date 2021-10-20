@@ -34,6 +34,26 @@ transition: .5s;
     margin: 0 30px;
 }
 
+/*增加點擊後的效果*/
+/* .focus:before{
+    content: '+';
+    background-color: #00A0f0;
+    padding: 5px;
+    border-radius: 50%;
+}
+.unfocus:before{
+    content: '-';
+    background-color: #00A0f0;
+    padding: 6px;
+    border-radius: 50%
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+} */
+
+
+
 @media screen and (max-width: 375px) {
     .accordion {
         width: 350px;
