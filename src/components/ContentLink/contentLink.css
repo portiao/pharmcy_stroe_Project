@@ -36,18 +36,20 @@
   animation-duration: 20s;
 }
 
-
-
-@media  screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
   .linkAgainst img {
-    width: 20%;
-  }
- 
-}
-
-@media  screen and (max-width:500px) {
-  .linkAgainst img {
-    width: 25%;
+    width: 30vw;
   }
 }
 
+@media screen and (max-width: 500px) {
+  .linkAgainst img {
+    width: 50vw;
+  }
+}
+
+/*a link跳轉其他頁面樣式修改 跟 contentLink1元件一樣*/
+.changeLinkTo {
+  color: none;
+  text-decoration: none;
+}

@@ -34,8 +34,8 @@
 }
 /*醫生照片*/
 .doctorPic img{
-    width:30vw;
-    height: 100%;
+    width:auto;
+    height: 547px;
 }
 
 .newPadding{

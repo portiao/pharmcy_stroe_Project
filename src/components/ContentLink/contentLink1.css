@@ -34,12 +34,21 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .linkAgainst1 img {
-    width: 20%;
+  .linkAgainst img {
+    width: 30vw;
   }
 }
+
 @media screen and (max-width: 500px) {
-  .linkAgainst1 img {
-    width: 20%;
+  .linkAgainst img {
+    width: 30vw;
   }
 }
+
+
+/*a link跳轉其他頁面樣式修改 跟 contentLink元件一樣*/
+.changeLinkTo {
+  color: none;
+  text-decoration: none;
+}
+
