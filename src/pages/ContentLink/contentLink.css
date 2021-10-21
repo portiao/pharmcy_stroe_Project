@@ -1,0 +1,40 @@
+.linkAgainst {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: visible;
+}
+
+.linkAgainst img {
+  width: 20vw;
+  height: auto;
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+.linkAgainst {
+  position: relative;
+  /* bottom: 130px; */
+  right: 0;
+  left: 0;
+  height: 18rem;
+  background-size: 250rem 18rem;
+  /*infinite 動畫一直撥放*/
+  animation: play-state 5s linear infinite;
+  height: 20rem;
+  background-size: reverse;
+  animation-duration: 10s;
+}
+.linkAgainst:hover {
+  animation-play-state: paused;
+}
+/*動畫*/
+
+@keyframes play-state {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -50%;
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import "./encyclopedia.css";
+import './reset.css'
 
 function Encyclopedia() {
   return (

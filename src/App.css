@@ -2,6 +2,15 @@
   text-align: center;
 }
 
-.headerBack{
+.headerBack {
   display: flex;
+}
+.aboutUsMM {
+  display: block;
+  margin-bottom: 200px;
+}
+.contentLink {
+  display: inline-flex;
+  white-space: nowrap;
+  overflow-x: hidden;
 }
