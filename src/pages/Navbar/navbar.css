@@ -1,0 +1,61 @@
+.navbarDesTop{
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    position:fixed;
+    z-index: 9999;
+}
+
+.homeIconLogo{
+    display: flex;
+    align-items: center;
+}
+.navbarLinkDesTop{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.navbarLinkDesTop1{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbarLinkDesTop1 >p{
+    margin-right: 77px;
+}
+
+.positionIconA{
+    display: flex;
+    gap: 10px;
+}
+.navbarLinkDesTop2{
+    display: flex;
+    gap:40px;
+}
+.navbarLinkDesTop2 a{
+    text-decoration:none;
+    color:black;
+}
+
+.navbarAllIcon{
+    display: flex;
+    gap:10px
+}
+.navbarIconLine1{
+    padding-right:40px;
+    border-right:1px solid black;
+}
+
+
+
+
+
+@media  screen and (max-width:900px) {
+    .navbarDesTop{
+        display: none;
+    }
+}

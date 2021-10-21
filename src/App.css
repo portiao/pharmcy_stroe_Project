@@ -4,6 +4,7 @@
 
 .headerBack {
   display: flex;
+  padding-top: 60px;
 }
 .aboutUsMM {
   display: block;
@@ -13,4 +14,13 @@
   display: inline-flex;
   white-space: nowrap;
   overflow-x: hidden;
+  margin-bottom: 30px;
+}
+
+
+
+@media  screen and (max-width:900px) {
+  .headerBack {
+    padding-top: 25px;
+  }
 }
