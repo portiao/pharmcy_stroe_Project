@@ -1,26 +1,13 @@
-.App {
-  text-align: center;
-}
-
-.headerBack {
-  display: flex;
-  padding-top: 100px;
-}
-.aboutUsMM {
-  display: block;
-  margin-bottom: 200px;
-}
-.contentLink {
-  display: inline-flex;
-  white-space: nowrap;
+/*避免出現滾軸*/
+:root {
+  overflow-y: auto;
   overflow-x: hidden;
-  margin-bottom: 30px;
 }
 
-
-
-@media  screen and (max-width:900px) {
-  .headerBack {
-    padding-top: 25px;
-  }
+/*限制手機板左右滑動*/
+body {
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
 }
+

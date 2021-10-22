@@ -1,0 +1,31 @@
+/*避免出現滾軸*/
+:root {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  /*限制手機板左右滑動*/
+  body {
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+  }
+  
+  .homePage {
+    text-align: center;
+  }
+  
+
+  .aboutUsMM {
+    display: block;
+    margin-bottom: 200px;
+  }
+  .contentLink {
+    display: inline-flex;
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: 30px;
+  }
+  
+ 
+  

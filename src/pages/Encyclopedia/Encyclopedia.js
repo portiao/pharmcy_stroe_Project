@@ -31,8 +31,11 @@ function Encyclopedia() {
           {iconList.map((v, i) => (
             <div className="allIcon" key={i}>
               <div className="liImg">
-                <img src={`../../images/encyclopedia/${v}.png`} alt={v} />
-                <p>{v}</p>
+                <a className="chandePageEnc" href={`https://www.youtube.com/#${v}`} target="_blank">
+                  <img src={`../../images/encyclopedia/${v}.png`} alt={v} />
+
+                  <p>{v}</p>
+                </a>
               </div>
             </div>
           ))}

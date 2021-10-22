@@ -43,6 +43,10 @@
     width: 40%;
     height:40%;
 }
+.chandePageEnc{
+    text-decoration: none;
+    color: black;
+}
 
 .line1icon{
     display: flex;

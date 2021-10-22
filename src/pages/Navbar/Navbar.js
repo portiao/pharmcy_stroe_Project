@@ -6,14 +6,14 @@ import { FaRegUserCircle } from "react-icons/fa"; //會員
 import { FiHeart } from "react-icons/fi"; //愛心
 import { MdOutlineAssignment } from "react-icons/md"; //處方籤
 
-import NavbarPush from "../../components/NavbarPush/NavbarPush"; //活動頁籤
+import NavbarPush from "./components/NavbarPush"; //活動頁籤
+import NewPush from "./components/NewPush"; //最新消息頁籤
 
 function Navbar() {
   /*下拉式選單狀態 */
   const [buttonIndex, setButtonIndex] = useState(0);
   return (
     <>
-      {/* onMouseLeave 滑鼠移出事件  這個navbarAll沒用到 */}
       <div
         className="navbarAll"
         onMouseLeave={() => {
@@ -26,14 +26,22 @@ function Navbar() {
           </div>
           <div className="navbarLinkDesTop">
             <div className="navbarLinkDesTop1">
-              <p className="positionIconA">
-                <MdOutlineAssignment />
-                <p>處方領藥</p>
-              </p>
+              <a href="https://www.youtube.com/" className="navChandePageEnc">
+                <p className="positionIconA">
+                  <MdOutlineAssignment />
+                  <p>處方領藥</p>
+                </p>
+              </a>
               <div className="navbarAllIcon">
-                <FiHeart />
-                <BsCart2 />
-                <FaRegUserCircle />
+                <a href="https://www.youtube.com/" className="navChandePageEnc">
+                  <FiHeart />
+                </a>
+                <a href="https://www.youtube.com/" className="navChandePageEnc">
+                  <BsCart2 />
+                </a>
+                <a href="https://www.youtube.com/" className="navChandePageEnc">
+                  <FaRegUserCircle />
+                </a>
               </div>
             </div>
             <div className="navbarLinkDesTop2">
@@ -64,7 +72,7 @@ function Navbar() {
                   alt="半圓"
                 />
               </div>
-              <div>
+              <div  className="forCenter">
                 <p
                   className="navbarIconLine1"
                   onMouseEnter={() => {
@@ -83,7 +91,7 @@ function Navbar() {
                   alt="半圓"
                 />
               </div>
-              <div>
+              <div  className="forCenter">
                 <p
                   onMouseEnter={() => {
                     setButtonIndex(3);
@@ -105,8 +113,22 @@ function Navbar() {
             </div>
           </div>
         </div>
-        <div className={buttonIndex !== 0 ? "buttonAndIconPush" : ""}>
+        <div className={buttonIndex === 1 ? "buttonAndIconPush" : ""}>
           {buttonIndex === 1 ? <NavbarPush /> : ""}
+        </div>
+        <div className={buttonIndex === 2 ? "buttonAndIconPush" : ""}>
+          {buttonIndex === 2 ? (
+            <NewPush name1="活動專區" name2="相關連結" />
+          ) : (
+            ""
+          )}
+        </div>
+        <div className={buttonIndex === 3 ? "buttonAndIconPush" : ""}>
+          {buttonIndex === 3 ? (
+            <NewPush name1="品牌介紹" name2="門市資訊" />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </>

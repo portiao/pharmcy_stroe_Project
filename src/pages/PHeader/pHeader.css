@@ -1,9 +1,3 @@
-/*避免出現滾軸*/
-:root {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
 /* banner圖尺寸 */
 .indexbanner{
     max-width: 100%;
