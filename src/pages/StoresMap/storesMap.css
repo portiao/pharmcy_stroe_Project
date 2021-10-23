@@ -63,6 +63,7 @@
   border-radius: 10px;
   background-color: #00a0f0;
   border: 1px solid #00a0f0;
+  cursor: pointer;
 }
 
 .selectAndInputAroundTT {
@@ -83,9 +84,59 @@
   margin: auto;
   flex-direction: column;
   gap: 20px;
+  padding-top: 20px;
 }
 
-.useGapForSearch{
+.useGapForSearch {
   display: flex;
   gap: 20px;
+}
+
+/*卡片整體修改*/
+.cardPosition {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px;
+}
+
+/*上下分頁修改*/
+.resetPagination {
+}
+
+@media screen and (max-width: 900px) {
+  .classButtonStore {
+    display: none;
+  }
+
+  /* .selectAndInputAroundTT {
+    display: flex;
+    justify-content: center;
+  } */
+  .selectAndInputAround {
+    border-top: 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .selectAll {
+    display: flex;
+    flex-direction: column;
+  }
+  select.selectClass,
+  .searchIconStores {
+    width: 280px;
+    height: 60px;
+  }
+  .useGapForSearch {
+    display: flex;
+    flex-direction: column;
+  }
+  .cardPosition{
+    width:100vw;
+    margin: auto;
+    margin-top: 30px;
+  }
 }

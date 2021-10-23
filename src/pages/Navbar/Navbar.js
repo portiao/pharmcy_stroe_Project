@@ -68,7 +68,7 @@ function Navbar() {
                       ? "halfCircleMove"
                       : "halfCircleMove hideClass"
                   }
-                  src="../../../images/photo/halfcircle.png"
+                  src="../../../images/encyclopedia/halfcircle.png"
                   alt="半圓"
                 />
               </div>
@@ -87,7 +87,7 @@ function Navbar() {
                       ? "halfCircleMove"
                       : "halfCircleMove hideClass"
                   }
-                  src="../../../images/photo/halfcircle.png"
+                  src="../../../images/encyclopedia/halfcircle.png"
                   alt="半圓"
                 />
               </div>
@@ -106,7 +106,7 @@ function Navbar() {
                       ? "halfCircleMove navbarIconLineAbouts"
                       : "halfCircleMove hideClass"
                   }
-                  src="../../../images/photo/halfcircle.png"
+                  src="../../../images/encyclopedia/halfcircle.png"
                   alt="半圓"
                 />
               </div>

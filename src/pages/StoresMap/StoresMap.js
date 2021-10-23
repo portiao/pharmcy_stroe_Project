@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./storesMap.css";
 import "./reset.css";
-import { BiSearch } from "react-icons/bi"; //引用search icon
+import { GoSearch } from "react-icons/go"; //引用search icon
+import CardStores from "../../components/StoresMap/CardStores"; //門市卡片
+
 
 //引入元件
-import Navbar from "../pages/Navbar/Navbar"; //共用元件 Nav
-import SelectTagStore from "../components/StoresMap/SelectTagStore"; //下拉選單
+import Navbar from "../Navbar/Navbar"; //共用元件 Nav
+import SelectTagStore from "../../components/StoresMap/SelectTagStore"; //下拉選單
 
 function StoresMap() {
   const [storesMapCity, setStoresMapCity] = useState("");
@@ -16,6 +18,7 @@ function StoresMap() {
       <Navbar />
       <div className="storesMapAround">
         <div className="pageIII">
+          {/* 麵包屑 */}
           <div className="breadListP">
             <a href="">
               <p>首頁</p>
@@ -34,7 +37,7 @@ function StoresMap() {
             <p>門市資訊</p>
           </div>
         </div>
-
+        {/* 縣市|區域|搜尋欄 */}
         <div className="selectAndInputAroundTT">
           <div className="selectAndInputAround">
             <div>
@@ -51,12 +54,29 @@ function StoresMap() {
                 placeholder="店名、店家所屬道路名稱"
               />
               <button className="searchIconStores">
-                <BiSearch />
+                <GoSearch />
               </button>
             </div>
           </div>
         </div>
+        {/* 地址卡片區 */}
+        <div className="cardPosition">
+          <CardStores />
+          <CardStores />
+          <CardStores />
+          <CardStores />
+          <CardStores />
+          <CardStores />
+          <CardStores />
+          <CardStores />
+          <CardStores />
+          <CardStores />
+          <CardStores />
+          <CardStores />
+        </div>
       </div>
+      
+      
     </>
   );
 }
