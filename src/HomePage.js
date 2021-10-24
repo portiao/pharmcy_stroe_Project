@@ -13,7 +13,7 @@ import Footer from './pages/Footer/Footer'; //共用元件 Footer
 function HomePage() {
   return (
     <div className="homePage">
-      <Navbar/>
+      {/* <Navbar/> */}
       <div className="headerBack">
         <PHeader />
       </div>

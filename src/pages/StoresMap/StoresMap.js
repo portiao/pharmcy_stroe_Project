@@ -6,7 +6,7 @@ import CardStores from "../../components/StoresMap/CardStores"; //門市卡片
 
 
 //引入元件
-import Navbar from "../Navbar/Navbar"; //共用元件 Nav
+// import Navbar from "../Navbar/Navbar"; //共用元件 Nav
 import SelectTagStore from "../../components/StoresMap/SelectTagStore"; //下拉選單
 
 function StoresMap() {
@@ -15,7 +15,7 @@ function StoresMap() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="storesMapAround">
         <div className="pageIII">
           {/* 麵包屑 */}

@@ -1,13 +1,19 @@
 import React from "react";
 import "./cardStores.css";
-
+import { GrMapLocation } from "react-icons/gr"; //引用map icon
 function CardStores() {
   return (
     <>
       <div className="storeAllPos cardShadowPo">
         <div className="linePosStoes"></div>
         <div className="storeInPos">
-          <p className="storeNamePos">中山吉林店</p>
+          <div className="storeNameMapT">
+            <p className="storeNamePos">中山吉林店</p>
+            <a href="" className="mapLocationStore">
+              <GrMapLocation className="mapIconLarge" />
+            </a>
+          </div>
+
           <div className="addressCardPos">
             <p className="addressNamePos">
               <span>地</span>

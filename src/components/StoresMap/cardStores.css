@@ -43,3 +43,20 @@
   display: flex;
   justify-content: space-between;
 }
+
+/*地圖icon*/
+.mapLocationStore {
+  color: none;
+  text-decoration: none;
+}
+
+.mapIconLarge {
+  width: 25px;
+  height: auto;
+}
+
+.storeNameMapT{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 25px;
+}
