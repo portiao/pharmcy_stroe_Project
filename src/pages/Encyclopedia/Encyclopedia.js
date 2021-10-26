@@ -32,7 +32,7 @@ function Encyclopedia() {
             <div className="allIcon" key={i}>
               <div className="liImg">
                 <a className="chandePageEnc" href={`https://www.youtube.com/#${v}`} target="_blank">
-                  <img src={`../../images/encyclopedia/${v}.png`} alt={v} />
+                  <img src={`./images/encyclopedia/${v}.png`} alt={v} />
 
                   <p>{v}</p>
                 </a>

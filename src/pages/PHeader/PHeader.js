@@ -7,6 +7,7 @@ import "./pHeader.css";
 import AirQuality from "../../components/AirQ/AirQuality"; //空氣品質
 import ActivePage from "../../components/ActivePage/ActivePage"; //活動頁籤
 
+const Indexbanner = "./images/photo/indexbanner.jpg" //Banner圖
 
 function PHeader() {
   return (
@@ -14,7 +15,7 @@ function PHeader() {
       <div className="changeSpace">
         <img
           className="indexbanner"
-          src="../../../images/photo/indexbanner.jpg"
+          src={Indexbanner}
         ></img>
         <div className="activeMove" >
           <ActivePage />

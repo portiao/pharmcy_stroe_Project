@@ -19,7 +19,7 @@ function NavbarPush() {
             <div className="navallIcon" key={i}>
               <div className="navliImg">
               <a className="navChandePageEnc" href={`https://www.youtube.com/#${v}`} target="_blank">
-                <img src={`../../../../images/encyclopedia/${v}.png`} alt={v} />
+                <img src={`./images/encyclopedia/${v}.png`} alt={v} />
                 <p>{v}</p>
                 </a>
               </div>
@@ -80,7 +80,7 @@ function NavbarPush() {
         </div>
         <div className="arrowEnterAgain">
           <a href="">
-            <img src="../../../../images/photo/enter.png" alt="" />
+            <img src="./images/photo/enter.png" alt="" />
           </a>
         </div>
       </div>

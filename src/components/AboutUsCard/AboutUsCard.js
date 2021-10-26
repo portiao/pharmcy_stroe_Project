@@ -37,9 +37,9 @@ export default class AboutUsCard extends Component {
     return (
       <>
         <Slider className="doctorCard" {...settings}>
-          <img src="../../../images/photo/doctor1.png" alt="負責藥師" />
-          <img src="../../../images/photo/doctor2.png" alt="藥師" />
-          <img src="../../../images/photo/doctor3.png" alt="藥師" />
+          <img src="./images/photo/doctor1.png" alt="負責藥師" />
+          <img src="./images/photo/doctor2.png" alt="藥師" />
+          <img src="./images/photo/doctor3.png" alt="藥師" />
         </Slider>
       </>
     );

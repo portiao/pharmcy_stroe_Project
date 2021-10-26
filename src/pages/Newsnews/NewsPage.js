@@ -3,6 +3,8 @@ import "./newsPage.css";
 import "./reset.css"
 
 import AccordionNews from "../../components/AccordionNews/AccordionNews";
+const newsDoctorP = "./images/photo/newsDoctor.jpg" //醫生最新消息圖
+
 
 function NewsPage() {
   return (
@@ -11,7 +13,7 @@ function NewsPage() {
       <h1 className="text-divider2">NEWS</h1>
       <div className="allNews">
         <div className="doctorPic">
-          <img src="../../../images/photo/newsDoctor.jpg"></img>
+          <img src={newsDoctorP}></img>
         </div>
         <div className="newPadding">
           <AccordionNews />

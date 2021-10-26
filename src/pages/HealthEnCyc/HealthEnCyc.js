@@ -27,7 +27,7 @@ function HealthEnCyc() {
       <div>
         <img
           className="healthQPic"
-          src="../../../images/photo/jamie-street-vcn2ndJ5LwE-unsplash.jpg"
+          src="./images/photo/jamie-street-vcn2ndJ5LwE-unsplash.jpg"
           alt=""
         />
       </div>
@@ -93,7 +93,7 @@ function HealthEnCyc() {
                       href={`https://www.youtube.com/#${v}`}
                       target="_blank"
                     >
-                      <img src={`../../images/encyclopedia/${v}.png`} alt={v} />
+                      <img src={`./images/encyclopedia/${v}.png`} alt={v} />
 
                       <p>{v}</p>
                     </a>

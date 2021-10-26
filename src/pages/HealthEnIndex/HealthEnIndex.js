@@ -66,7 +66,7 @@ function HealthEnIndex() {
             <p className="heartHealthIndex">心臟</p>
             <img
               className="imgHeartDetail"
-              src="../../../images/photo/heart img.png"
+              src="./images/photo/heart img.png"
               alt="心臟詳細圖"
             />
           </div>
@@ -75,7 +75,7 @@ function HealthEnIndex() {
           {/* 要回傳的值用map方法回傳 ，變歷變資料→v*/}
           {data.map((v, i) => {
             return (
-              <div className="pIndexAllOne">
+              <div className="pIndexAllOne" key={i}>
                 <p className="pIndex">{v.name}</p>
                 <p className="pIndexContent">{v.text}</p>
               </div>
