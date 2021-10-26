@@ -9,9 +9,8 @@ import { MdOutlineAssignment } from "react-icons/md"; //處方籤
 import NavbarPush from "./components/NavbarPush"; //活動頁籤
 import NewPush from "./components/NewPush"; //最新消息頁籤
 
-const halfCirclePic = "./images/encyclopedia/halfcircle.png" //半圓的圖
-const LogoPic ="./images/Logo.jpg" //Logo圖
-
+const halfCirclePic = "./images/encyclopedia/halfcircle.png"; //半圓的圖
+const LogoPic = "./images/Logo.jpg"; //Logo圖
 
 function Navbar() {
   /*下拉式選單狀態 */
@@ -76,7 +75,7 @@ function Navbar() {
                   alt="半圓"
                 />
               </div>
-              <div  className="forCenter">
+              <div className="forCenter">
                 <p
                   className="navbarIconLine1"
                   onMouseEnter={() => {
@@ -95,7 +94,7 @@ function Navbar() {
                   alt="半圓"
                 />
               </div>
-              <div  className="forCenter">
+              <div className="forCenter">
                 <p
                   onMouseEnter={() => {
                     setButtonIndex(3);

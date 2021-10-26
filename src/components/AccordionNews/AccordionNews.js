@@ -47,7 +47,7 @@ const AccordionItem = (props) => {
   const { item, index, setVisable, visable } = props;
   return (
     <div className="accordion-item" onClick={() => setVisable(index)}>
-      <div className="title">
+      <div className="titleP">
         <div>{item.title}</div>
         {/* 檢查是否被打開 */}
         <div className={visable ? 'focus' : 'unfocus'}></div>

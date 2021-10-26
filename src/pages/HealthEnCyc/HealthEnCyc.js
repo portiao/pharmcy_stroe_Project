@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { AiOutlineRight } from "react-icons/ai";
-import "./reset.css";
 import "./healthEnCyc.css";
 
 const iconList = [

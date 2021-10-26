@@ -1,9 +1,9 @@
-import React from 'react'
-import './airQuality.css'
+import React from "react";
+import "./airQuality.css";
 
 function AirQuality() {
-    return (
-        <>
+  return (
+    <>
       <div className="airCard">
         <div className="airTitle">
           <p className="airLine">
@@ -17,17 +17,16 @@ function AirQuality() {
             <p>萬華區</p>
           </div>
           <div className="inputBox">
-            <input type="text" placeholder="    請輸入城市名稱"/>
+            <input type="text" placeholder="    請輸入城市名稱" />
           </div>
           <div className="seBtn">
             <button className="button-7 ">GPS</button>
             <button className="button-7">搜尋</button>
+          </div>
         </div>
-        </div>
-        
       </div>
     </>
-    )
+  );
 }
 
-export default AirQuality
+export default AirQuality;

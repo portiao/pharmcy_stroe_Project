@@ -1,6 +1,6 @@
 import React from "react";
 import "./encyclopedia.css";
-import "./reset.css";
+
 
 const iconList = [
   "心臟",

@@ -3,7 +3,7 @@ width: 750px;
 margin: 0px auto;
 /* border: 1px solid #ccc; */
 }
-.title {
+.titleP {
 padding: 26.2px;
 font-size: 22px;
 /* font-weight: bold; */
@@ -47,7 +47,7 @@ transition: .5s;
     padding: 6px;
     border-radius: 50%
 }
-.title{
+.titleP{
     display: flex;
     justify-content: space-between;
 } */
@@ -58,7 +58,7 @@ transition: .5s;
     .accordion {
         width: 350px;
         }
-        .title {
+        .titleP {
             padding: 15px 2px;
             font-size: 8px;
         }

@@ -1,6 +1,4 @@
-import React from 'react'
-import './footer.css'
-import './reset.css'
+import './Footer.css'
 
 function Footer() {
   const topLink = [
@@ -77,7 +75,7 @@ function Footer() {
           </a>
           {/* 桌機 */}
           <a href="#/" className="d-none d-lg-block" onClick={goToTop}>
-            <img src="../images/icon/big-return-top.png" alt="" />
+            <img src="./images/icon/big-return-top.png" alt="" />
           </a>
         </div>
         <div className="container">

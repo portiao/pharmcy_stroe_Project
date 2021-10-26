@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./storesMap.css";
-import "./reset.css";
 import { GoSearch } from "react-icons/go"; //引用search icon
 import CardStores from "../../components/StoresMap/CardStores"; //門市卡片
 

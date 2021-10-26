@@ -1,6 +1,6 @@
 import React from "react";
 import "./newsPage.css";
-import "./reset.css"
+
 
 import AccordionNews from "../../components/AccordionNews/AccordionNews";
 const newsDoctorP = "./images/photo/newsDoctor.jpg" //醫生最新消息圖

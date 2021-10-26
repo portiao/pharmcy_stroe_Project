@@ -1,31 +1,38 @@
+.homePage *, .homePage *::before, .homePage *::after {
+  box-sizing:content-box ;
+}
+
+
+
 /*避免出現滾軸*/
 :root {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-  
-  /*限制手機板左右滑動*/
-  body {
-    width: 100vw;
-    overflow: hidden;
-    position: absolute;
-  }
-  
-  .homePage {
-    text-align: center;
-  }
-  
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 
-  .aboutUsMM {
-    display: block;
-    margin-bottom: 200px;
-  }
-  .contentLink {
-    display: inline-flex;
-    white-space: nowrap;
-    overflow-x: hidden;
-    margin-bottom: 30px;
-  }
-  
- 
-  
+/*限制手機板左右滑動*/
+body {
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+}
+
+.homePage {
+  text-align: center;
+}
+
+/* 改滾輪寬度 */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.aboutUsMM {
+  display: block;
+  margin-bottom: 200px;
+}
+.contentLink {
+  display: inline-flex;
+  white-space: nowrap;
+  overflow-x: hidden;
+  margin-bottom: 30px;
+}

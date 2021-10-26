@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./reset.css"; //CSS預設
 //引入套件
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

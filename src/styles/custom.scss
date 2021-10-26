@@ -1,0 +1,28 @@
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+// 其它要導入覆蓋掉原本的預設bootstrap樣式要放在這下面
+// 上方固定選單用的
+
+
+// ========== navbar：bootstrpa手風琴的css覆蓋 =============
+.card {
+  border: transparent;
+}
+
+.accordion > .card >.card-header {
+  background-color: #eef7fc;
+  border-top: 1px dashed #00a0f0;
+  border-bottom: none;
+}
+
+#card-header-0{
+  border-top: none;
+}
+.card-body {
+  padding: 0 30px 30px;
+  color: #00a0f0;
+  font-size: 14px;
+  line-height: 30px;
+}
+

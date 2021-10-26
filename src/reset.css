@@ -3,6 +3,21 @@
    License: none (public domain)
 */
 
+/*避免出現滾軸*/
+:root {
+	overflow-y: auto;
+	overflow-x: hidden;
+  }
+  
+  /*限制手機板左右滑動*/
+  body {
+	width: 100vw;
+	overflow: hidden;
+	position: absolute;
+  }
+  
+
+
 @import url("https://fonts.googleapis.com/earlyaccess/cwtexyen.css");
 body { font-family: 'cwTeXYen'!important;}
 

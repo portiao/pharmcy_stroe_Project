@@ -1,6 +1,6 @@
 import React from "react";
 import "./aboutUs.css";
-import "./reset.css";
+
 
 import AboutUsCard from "../../components/AboutUsCard/AboutUsCard";
 
