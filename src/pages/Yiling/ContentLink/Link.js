@@ -1,8 +1,8 @@
 import React from "react";
 import "./link.css";
 
-import ContentLink from "../../components/ContentLink/ContentLink";
-import ContentLink1 from "../../components/ContentLink/ContentLink1";
+import ContentLink from "../../../components/Yiling/ContentLink/ContentLink";
+import ContentLink1 from "../../../components/Yiling/ContentLink/ContentLink1";
 
 function Link() {
   return (

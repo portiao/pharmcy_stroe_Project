@@ -3,8 +3,8 @@ import "./pHeader.css";
 
 
 //元件引入
-import AirQuality from "../../components/AirQ/AirQuality"; //空氣品質
-import ActivePage from "../../components/ActivePage/ActivePage"; //活動頁籤
+import AirQuality from "../../../components/Yiling/AirQ/AirQuality"; //空氣品質
+import ActivePage from "../../../components/Yiling/ActivePage/ActivePage"; //活動頁籤
 
 const Indexbanner = "./images/photo/indexbanner.jpg" //Banner圖
 

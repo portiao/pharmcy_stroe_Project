@@ -2,7 +2,7 @@ import React from "react";
 import "./newsPage.css";
 
 
-import AccordionNews from "../../components/AccordionNews/AccordionNews";
+import AccordionNews from "../../../components/Yiling/AccordionNews/AccordionNews";
 const newsDoctorP = "./images/photo/newsDoctor.jpg" //醫生最新消息圖
 
 

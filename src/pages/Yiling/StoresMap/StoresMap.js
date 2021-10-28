@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./storesMap.css";
 import { GoSearch } from "react-icons/go"; //引用search icon
-import CardStores from "../../components/StoresMap/CardStores"; //門市卡片
+import CardStores from "../../../components/Yiling/StoresMap/CardStores"; //門市卡片
 
 
 //引入元件
 // import Navbar from "../Navbar/Navbar"; //共用元件 Nav
-import SelectTagStore from "../../components/StoresMap/SelectTagStore"; //下拉選單
+import SelectTagStore from "../../../components/Yiling/StoresMap/SelectTagStore"; //下拉選單
 
 function StoresMap() {
   const [storesMapCity, setStoresMapCity] = useState("");

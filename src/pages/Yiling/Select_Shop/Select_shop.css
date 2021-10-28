@@ -259,18 +259,17 @@
 }
 
 .zi-select-shop-map-area {
-  width: 100%;
+  /* width: 100%;
   background: #dee8ef;
   border: 2px dashed #66cbff;
-  display: flex;
+  display: flex; */
   /* justify-content: center; */
-  align-items: center;
-  flex-direction: column;
+  /* align-items: center;
+  flex-direction: column; */
 }
 
 .zi-select-shop-google-map {
-  width: 585px;
-  height: 863px;
+  
 }
 
 @media (max-width: 375px) {

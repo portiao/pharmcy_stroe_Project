@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 //自己的CSS
 import "./popularProduct.css";
 //引入熱門商品
-import NewPopularProduct from "../../components/PopularProduct/NewPopularProduct";
+import NewPopularProduct from "../../../components/Yiling/PopularProduct/NewPopularProduct";
 
 export default class PopularProduct extends Component {
   render() {

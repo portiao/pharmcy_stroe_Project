@@ -38,7 +38,7 @@ function HealthEnIndex() {
       <div>
         <img
           className="healthQPic"
-          src="../../../images/photo/jamie-street-vcn2ndJ5LwE-unsplash.jpg"
+          src="./images/photo/jamie-street-vcn2ndJ5LwE-unsplash.jpg"
           alt=""
         />
       </div>

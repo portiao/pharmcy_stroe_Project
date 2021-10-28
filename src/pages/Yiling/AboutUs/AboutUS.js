@@ -2,7 +2,7 @@ import React from "react";
 import "./aboutUs.css";
 
 
-import AboutUsCard from "../../components/AboutUsCard/AboutUsCard";
+import AboutUsCard from "../../../components/Yiling/AboutUsCard/AboutUsCard";
 
 function AboutUS() {
   return (
