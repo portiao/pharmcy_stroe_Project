@@ -1,67 +1,67 @@
-import './Footer.css'
+import "./Footer.css";
 
 function Footer() {
   const topLink = [
     {
-      theClass: 'login',
-      one: '會員註冊',
-      two: '會員登入',
-      three: '處方簽查詢',
+      theClass: "login",
+      one: "會員註冊",
+      two: "會員登入",
+      three: "處方簽查詢",
     },
     {
-      theClass: 'shop',
-      one: '線上購物',
-      two: '商品分類',
-      three: '依身體部位',
-      four: '訂單查詢',
+      theClass: "shop",
+      one: "線上購物",
+      two: "商品分類",
+      three: "依身體部位",
+      four: "訂單查詢",
     },
     {
-      theClass: 'health-knowledge',
-      one: '保健知識',
-      two: '保健百科',
-      three: '症狀篩檢',
-      four: '醫院|藥局',
+      theClass: "health-knowledge",
+      one: "保健知識",
+      two: "保健百科",
+      three: "症狀篩檢",
+      four: "醫院|藥局",
     },
     {
-      theClass: 'latest-news d-none d-lg-block',
-      one: '最新消息',
-      two: '活動專區',
-      three: '相關連結',
+      theClass: "latest-news d-none d-lg-block",
+      one: "最新消息",
+      two: "活動專區",
+      three: "相關連結",
     },
     {
-      theClass: 'contact d-none d-lg-block',
-      one: '聯絡我們',
-      two: '品牌介紹',
-      three: '最新消息',
-      four: '門市資訊',
+      theClass: "contact d-none d-lg-block",
+      one: "聯絡我們",
+      two: "品牌介紹",
+      three: "最新消息",
+      four: "門市資訊",
     },
-  ]
+  ];
 
   const bottomLink = [
     {
-      theClass: 'latest-news',
-      one: '最新消息',
-      two: '活動專區',
-      three: '相關連結',
+      theClass: "latest-news",
+      one: "最新消息",
+      two: "活動專區",
+      three: "相關連結",
     },
     {
-      theClass: 'contact',
-      one: '聯絡我們',
-      two: '品牌介紹',
-      three: '最新消息',
-      four: '門市資訊',
+      theClass: "contact",
+      one: "聯絡我們",
+      two: "品牌介紹",
+      three: "最新消息",
+      four: "門市資訊",
     },
-  ]
+  ];
 
   function goToTop() {
     let scrollToTop = window.setInterval(function () {
-      let pos = window.pageYOffset
+      let pos = window.pageYOffset;
       if (pos > 0) {
-        window.scrollTo(0, pos - 20) // 每一次滾動多遠
+        window.scrollTo(0, pos - 20); // 每一次滾動多遠
       } else {
-        window.clearInterval(scrollToTop)
+        window.clearInterval(scrollToTop);
       }
-    }, 2)
+    }, 2);
   }
 
   return (
@@ -96,6 +96,7 @@ function Footer() {
                 <button className="email-button d-none d-lg-block">
                   SUBSCRIBE ME
                 </button>
+                
               </div>
             </div>
 
@@ -118,7 +119,7 @@ function Footer() {
                         <a href="#/">{v.four}</a>
                       </p>
                     </div>
-                  )
+                  );
                 })}
               </div>
 
@@ -139,7 +140,7 @@ function Footer() {
                         <a href="#/">{v.four}</a>
                       </p>
                     </div>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -150,7 +151,7 @@ function Footer() {
         </div>
       </footer>
     </>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

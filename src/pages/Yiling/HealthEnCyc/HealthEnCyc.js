@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineRight } from "react-icons/ai";
+import { dataNameImport } from "../HealthEnIndex/HealthDatabase"; //引入方法
+import _ from "lodash"; //引入方法函示庫，react內建不需安裝
 import "./healthEnCyc.css";
 
 const iconList = [
@@ -21,12 +23,26 @@ const iconList = [
 ];
 
 function HealthEnCyc() {
+  //尋找中英文對照
+  const [ChEn, serChEn] = useState([]);
+
+  useEffect(() => {
+    const En = [];
+    //中英文轉換迴圈(字典)
+    for (let i = 0; i < iconList.length; i++) {
+      En.push(_.findKey(dataNameImport, { name: iconList[i] }));
+      // console.log(iconList[i]);
+    }
+    serChEn(En);
+    // console.log(En);
+  }, []);
+
   return (
     <>
       <div>
         <img
           className="healthQPic"
-          src="./images/photo/jamie-street-vcn2ndJ5LwE-unsplash.jpg"
+          src="http://localhost:3000/images/photo/jamie-street-vcn2ndJ5LwE-unsplash.jpg"
           alt=""
         />
       </div>
@@ -89,10 +105,13 @@ function HealthEnCyc() {
                   <div className="liImg ">
                     <a
                       className="chandePageEnc"
-                      href={`https://www.youtube.com/#${v}`}
-                      target="_blank"
+                      href={`http://localhost:3000/HealthEnIndex/${ChEn[i]}`}
+                      
                     >
-                      <img src={`./images/encyclopedia/${v}.png`} alt={v} />
+                      <img
+                        src={`http://localhost:3000/images/encyclopedia/${v}.png`}
+                        alt={v}
+                      />
 
                       <p>{v}</p>
                     </a>

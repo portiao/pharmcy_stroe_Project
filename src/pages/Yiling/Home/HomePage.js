@@ -1,4 +1,5 @@
 import "./homePage.css";
+import React, { useState } from "react";
 
 // 引入page
 import PHeader from "../PHeader/PHeader"; //header
@@ -9,8 +10,29 @@ import AboutUS from "../AboutUs/AboutUS"; //關於我們
 import Link from "../ContentLink/Link"; //相關連結
 
 function HomePage() {
+  const [dis, setDis] = useState(true);
+
   return (
     <div className="homePage">
+      {dis === true && (
+        <div
+          className="activeBig"
+          onClick={(e) => {
+            setDis(false);
+          }}
+        >
+          <div className="cancelMove">
+            <img src="./images/photo/jump.jpg" alt="" className="jumpSco" />
+
+            <img
+              src="./images/photo/cancel.png"
+              alt=""
+              className="cancelBtnN"
+            />
+          </div>
+        </div>
+      )}
+
       <div className="headerBack">
         <PHeader />
       </div>

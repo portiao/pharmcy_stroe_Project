@@ -37,4 +37,32 @@ body {
   margin-bottom: 30px;
 }
 
+.jumpSco{
+  width: 50vw;
+  height: auto;
+}
 
+.cancelBtnN{
+  width: 5vw;
+  height: 5vw;
+  position: relative;
+  left: -2.5vw;
+  top: -2.5vw;
+}
+
+.activeBig{
+  background-color: rgba(0, 0, 0, 0.527);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 120px;
+  left: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancelMove{
+  display: flex;
+}

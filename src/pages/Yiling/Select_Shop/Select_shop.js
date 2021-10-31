@@ -5,14 +5,24 @@ import "./Select_shop.css";
 import _ from "lodash"; //引入方法函示庫，react內建不需安裝
 import StoresMapForGoogle from "../../../components/Yiling/StoresMap/StoresMapForGoogle";
 import React, { useState, useEffect } from "react";
+import { GrMapLocation } from "react-icons/gr"; //引用map icon
+import CardStores from "../../../components/Yiling/StoresMap/CardStores"; //門市卡片
 const Background = "./images/photo/預約領藥背景圖.jpg";
 const Placeholder = "./images/photo/placeholder.png"; //map定位地圖
 
-function Select_shop() {
-  //要傳遞狀態至最近門市的按鈕(定位)，給子元素
-  let getGRef = React.createRef();
+function Select_shop(props) {
   //最近門市資訊狀態
   const [nearShop, setNearShop] = useState("");
+  
+  const { setCloseStore } = props; //給梓庭用
+
+  useEffect(() => {
+    setCloseStore(nearShop);
+  }, [nearShop]);
+
+  //要傳遞狀態至最近門市的按鈕(定位)，給子元素
+  let getGRef = React.createRef();
+
   //全部門市資訊狀態
   // 參考
   // [
@@ -49,6 +59,13 @@ function Select_shop() {
       setValueShop(nearShop.sName);
     }
   }, [nearShop]); //最近門市改變
+
+  useEffect(() => {
+    const v = _.find(allShop, { sName: valueShop });
+    if (v !== undefined) {
+      setNearShop(v);
+    }
+  }, [valueShop]); //門市改變
 
   useEffect(() => {
     const cityIndex = _.findIndex(selectShop, function (o) {
@@ -186,6 +203,11 @@ function Select_shop() {
                   dataShop.map((v, i) => <option key={i}>{v}</option>)}
               </select>
             </form>
+
+            {/* 卡片元件 */}
+            <div className="cardAddWithMap">
+              {nearShop !== "" ? <CardStores storeHome={nearShop} /> : ""}
+            </div>
           </div>
 
           <div className="zi-select-shop-map-group">

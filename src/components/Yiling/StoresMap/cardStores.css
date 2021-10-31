@@ -1,6 +1,6 @@
 /*單一卡片外框*/
 .storeAllPos {
-  width: 376px;
+  width: auto;
   height: 220px;
   display: flex;
   justify-content: center;

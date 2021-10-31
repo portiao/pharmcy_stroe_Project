@@ -1,6 +1,7 @@
 .accordion {
 width: 750px;
 margin: 0px auto;
+text-align: left;
 /* border: 1px solid #ccc; */
 }
 .titleP {

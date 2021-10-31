@@ -1,8 +1,6 @@
 import React from "react";
 import "./selectTagStore.css";
 
-
-
 const storeMap = [
   { city: "台北市", site: ["大安區", "信義區", "松山區"] },
   { city: "新北市", site: ["板橋區", "土城區", "新莊區"] },
@@ -46,9 +44,11 @@ class SelectTagStore extends React.Component {
               onChange={this.handleChangeCity}
             >
               <option value="縣市">縣市</option>
-              <option value="台北市">台北市</option>
-              <option value="新北市">新北市</option>
-              <option value="台中市">台中市</option>
+              {this.props.inputCityIn.map((v, i) => (
+                <option value={v} key={i}>
+                  {v}
+                </option>
+              ))}
             </select>
           </label>
 
@@ -59,7 +59,7 @@ class SelectTagStore extends React.Component {
               onChange={this.handleChangeSite}
             >
               <option value="區域">區域</option>
-              {this.state.SiteArr.map((v, i) => (
+              {this.props.inputSiteIn.map((v, i) => (
                 <option value={v} key={i}>
                   {v}
                 </option>

@@ -10,11 +10,11 @@
 }
 
 /* 心臟詳細圖 */
-.imgHeartDetail {
+/* .imgHeartDetail {
   max-width: 569px;
   width: 100%;
   height: auto;
-}
+} */
 
 .IncludeImgDetail {
   display: flex;

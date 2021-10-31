@@ -15,7 +15,8 @@ const AnyReactComponent = ({ text, src }) => (
 );
 
 function StoresMapForGoogle(props) {
-  const { getGRef, nearShop, setNearShop, allShop, setAllShop, setSelectShop} = props;
+  const { getGRef, nearShop, setNearShop, allShop, setAllShop, setSelectShop } =
+    props;
 
   //useImperativeHandle讓getG可以在父元素訪問,透過Ref(節點)
   useImperativeHandle(getGRef, () => {
@@ -60,7 +61,7 @@ function StoresMapForGoogle(props) {
   //抓取Node.js門市資訊→透過googleapi解析座標→把資訊更新到React門市資訊的狀態
   const fetchSql = async () => {
     const result = await fetch(
-      `http://localhost:3001/stores-list/api/list`
+      `http://localhost:3001/stores-list/api/stores_list`
     ).then((res) => res.json());
     // console.log(result.rows);
     //setStores(result.rows);
@@ -88,7 +89,6 @@ function StoresMapForGoogle(props) {
     const newTogetherS = _.uniqBy(togetherS, function (o) {
       return o.city;
     });
-    
 
     //城市跑完後過濾區域
     for (let i = 0; i < newStores.length; i += 1) {
@@ -97,11 +97,14 @@ function StoresMapForGoogle(props) {
       const cityIndex = _.findIndex(newTogetherS, function (o) {
         return o.city === newStores[i].sCity;
       });
-      newTogetherS[cityIndex].sites.push({ site: newStores[i].sSite, shop:[] });
+      newTogetherS[cityIndex].sites.push({
+        site: newStores[i].sSite,
+        shop: [],
+      });
     }
     //刪除多餘的區域名稱
     for (let i = 0; i < newTogetherS.length; i += 1) {
-      newTogetherS[i].sites= _.uniqBy(newTogetherS[i].sites, function (o) {
+      newTogetherS[i].sites = _.uniqBy(newTogetherS[i].sites, function (o) {
         return o.site;
       });
     }
@@ -109,18 +112,20 @@ function StoresMapForGoogle(props) {
     //區域跑完過濾門市
     for (let i = 0; i < newStores.length; i += 1) {
       //1.城市+區域在哪裡
-      // city:newStores[i].sCity 
+      // city:newStores[i].sCity
       const cityIndex2 = _.findIndex(newTogetherS, function (o) {
         return o.city === newStores[i].sCity;
       });
-      const SiteIndex = _.findIndex(newTogetherS[cityIndex2].sites, function (o) {
-        return o.site === newStores[i].sSite;
-      });
+      const SiteIndex = _.findIndex(
+        newTogetherS[cityIndex2].sites,
+        function (o) {
+          return o.site === newStores[i].sSite;
+        }
+      );
       newTogetherS[cityIndex2].sites[SiteIndex].shop.push(newStores[i].sName);
-
     }
     //回傳下拉選單門市給父元素
-    setSelectShop(newTogetherS)
+    setSelectShop(newTogetherS);
     // console.log(newTogetherS);
 
     setStores(newStores); //子元素的狀態
@@ -154,15 +159,47 @@ function StoresMapForGoogle(props) {
         //拷貝門市資訊
         const newStores = [...stores];
         // console.log(newStores);
-        for (let i = 0; i < newStores.length; i++) {
-          //加入計算距離的參數 (人 ,地點)
-          newStores[i].distance = await listDistanceMatrixService(
-            pos,
-            newStores[i].location
-          );
-          //console.log(newStores[i].distance, i);
-        }
+        // for (let i = 0; i < newStores.length; i++) {
+        //   //加入計算距離的參數 (人 ,地點)
+        //   newStores[i].distance = await listDistanceMatrixService(
+        //     pos,
+        //     newStores[i].location
+        //   );
+        //console.log(newStores[i].distance, i);
+        // }
         //console.log(newStores);
+
+        //一次取多點距離--------------------這邊新增****
+        //提出經緯度陣列
+        const newlocation = [];
+        for (let i = 0; i < newStores.length; i++) {
+          newlocation.push(newStores[i].location);
+        }
+
+        //v是分割陣列的起點
+        let v = 0;
+        let newDistance = [];
+
+        //一次丟取25個位置資訊去要距離,Math.ceil=無條件進位,算要取幾次距離用的
+        for (let i = 0; i < Math.ceil(newlocation.length / 25); i++) {
+          // console.log(newlocation.slice(v, v + 25));
+          newDistance.push(
+            await listDistanceMatrixService(pos, newlocation.slice(v, v + 25))
+          );
+          v = v + 25;
+        }
+
+        //陣列減少維度_.flattenDeep(arr)
+        newDistance = _.flattenDeep(newDistance);
+        // console.log(newDistance);
+
+        //把取得的經緯度加進去門市資訊內
+        for (let i = 0; i < newDistance.length; i++) {
+          newStores[i].distance = newDistance[i].distance;
+        }
+        console.log(newStores);
+
+        //一次取多點距離--------------------以上是新增****
 
         // 依照位置排序
         newStores.sort((a, b) => {
@@ -189,7 +226,7 @@ function StoresMapForGoogle(props) {
     const request = {
       //屬性可參考->https://www.oxxostudio.tw/articles/201810/google-maps-19-directions.html
       origins: [originAddress], //起點位置
-      destinations: [destinationAddress], //目標位置
+      destinations: destinationAddress, //目標位置
       travelMode: mapApi.TravelMode.DRIVING, //時間用開車去算,但我只看距離
       unitSystem: mapApi.UnitSystem.METRIC, //距離單位系統有 UnitSystem.METRIC ( 公里 ) 和 UnitSystem.IMPERIAL ( 英里 ) 兩個選項，預設為 UnitSystem.METRIC。
       avoidHighways: false, //忽略高速公路，可設定 true 或 false。
@@ -198,7 +235,7 @@ function StoresMapForGoogle(props) {
     // 取得結果
     let distance = service.getDistanceMatrix(request).then((response) => {
       //console.log(response);
-      return response.rows[0].elements[0].distance; // 把距離的參數return出去到外層
+      return response.rows[0].elements; // 把距離的參數return出去到外層
     });
     return distance; // 把距離的參數return出去到函數外面
   }

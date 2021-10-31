@@ -1,10 +1,31 @@
 import React, { useState } from "react";
 import "./navbarPush.css";
+import { Link } from "react-router-dom";
 
 import { RiArrowDropRightLine } from "react-icons/ri"; //右邊箭頭
 
-const iconList = ["心臟", "腎臟", "肝臟", "肺臟", "腸胃", "泌尿道"];
-const iconSick = ["流鼻水", "疲憊", "心悸", "噁心、嘔吐", "咳嗽", "呼吸困難"];
+const iconList = [
+  { enName: "/HealthEnIndex/heart", chName: "心臟" },
+  { enName: "/HealthEnIndex/kidney", chName: "腎臟" },
+  { enName: "/HealthEnIndex/liver", chName: "肝臟" },
+  { enName: "/HealthEnIndex/lung", chName: "肺臟" },
+  { enName: "/HealthEnIndex/stomach", chName: "腸胃" },
+  {
+    enName: "/HealthEnIndex/Urinary_Tract",
+    chName: "泌尿道",
+  },
+];
+const iconSick = [
+  { enName: "/HealthEnIndex/heart", chName: "流鼻水" },
+  { enName: "/HealthEnIndex/kidney", chName: "疲憊" },
+  { enName: "/HealthEnIndex/liver", chName: "心悸" },
+  { enName: "/HealthEnIndex/lung", chName: "噁心、嘔吐" },
+  { enName: "/HealthEnIndex/stomach", chName: "咳嗽" },
+  {
+    enName: "/HealthEnIndex/Urinary_Tract",
+    chName: "呼吸困難",
+  },
+];
 
 function NavbarPush() {
   /*按鈕狀態 0是第一個被按下*/
@@ -18,10 +39,13 @@ function NavbarPush() {
           {arr.map((v, i) => (
             <div className="navallIcon" key={i}>
               <div className="navliImg">
-              <a className="navChandePageEnc" href={`https://www.youtube.com/#${v}`} target="_blank">
-                <img src={`./images/encyclopedia/${v}.png`} alt={v} />
-                <p>{v}</p>
-                </a>
+                <Link to={`${v.enName}`} className="navChandePageEnc" >
+                  <img
+                    src={`http://localhost:3000/images/encyclopedia/${v.chName}.png`}
+                    alt={v.chName}
+                  />
+                  <p>{v.chName}</p>
+                </Link>
               </div>
             </div>
           ))}
@@ -58,7 +82,11 @@ function NavbarPush() {
               <p>症狀篩檢</p>
               <RiArrowDropRightLine />
             </button>
-            <a href="https://yahoo.com.tw" target="_blank" className="changeHos">
+            <a
+              href="https://yahoo.com.tw"
+              target="_blank"
+              className="changeHos"
+            >
               <button
                 onClick={() => {
                   setButtonIndex(2);
@@ -79,9 +107,10 @@ function NavbarPush() {
           </div>
         </div>
         <div className="arrowEnterAgain">
-          <a href="">
-            <img src="./images/photo/enter.png" alt="" />
-          </a>
+          <Link to={buttonIndex === 0 ? "/HealthEnCyc" : "#"}
+          >
+            <img src="http://localhost:3000/images/photo/enter.png" alt="" />
+          </Link>
         </div>
       </div>
     </>

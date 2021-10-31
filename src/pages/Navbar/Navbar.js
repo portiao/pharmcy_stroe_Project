@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./navbar.css";
-
+import { Link } from "react-router-dom";
 import { BsCart2 } from "react-icons/bs"; //購物車
 import { FaRegUserCircle } from "react-icons/fa"; //會員
 import { FiHeart } from "react-icons/fi"; //愛心
@@ -9,8 +9,8 @@ import { MdOutlineAssignment } from "react-icons/md"; //處方籤
 import NavbarPush from "./components/NavbarPush"; //活動頁籤
 import NewPush from "./components/NewPush"; //最新消息頁籤
 
-const halfCirclePic = "./images/encyclopedia/halfcircle.png"; //半圓的圖
-const LogoPic = "./images/Logo.jpg"; //Logo圖
+const halfCirclePic = "http://localhost:3000/images/encyclopedia/halfcircle.png"; //半圓的圖
+const LogoPic = "http://localhost:3000/images/Logo.jpg"; //Logo圖
 
 function Navbar() {
   /*下拉式選單狀態 */
@@ -25,7 +25,9 @@ function Navbar() {
       >
         <div className="navbarDesTop">
           <div className="homeIconLogo">
+          <Link to="/HomePage">
             <img src={LogoPic} alt="" />
+            </Link>
           </div>
           <div className="navbarLinkDesTop">
             <div className="navbarLinkDesTop1">
@@ -121,14 +123,14 @@ function Navbar() {
         </div>
         <div className={buttonIndex === 2 ? "buttonAndIconPush" : ""}>
           {buttonIndex === 2 ? (
-            <NewPush name1="活動專區" name2="相關連結" />
+            <NewPush name1="活動專區" name2="相關連結" pos1={1700}  pos2={4300} path1='/HomePage' path2='/HomePage'/>
           ) : (
             ""
           )}
         </div>
         <div className={buttonIndex === 3 ? "buttonAndIconPush" : ""}>
           {buttonIndex === 3 ? (
-            <NewPush name1="品牌介紹" name2="門市資訊" />
+            <NewPush name1="品牌介紹" name2="門市資訊" pos1={3200}  pos2={100} path1='/HomePage' path2='/StoresMap'/>
           ) : (
             ""
           )}
