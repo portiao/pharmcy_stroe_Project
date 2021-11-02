@@ -5,7 +5,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Navbar from "./pages/Navbar/Navbar"; //桌機導覽列
-import MobileNavBar from "./components/Yiling/MobileNavBar/MobileNavBar"; //手機導覽列
+//import MobileNavBar from "./components/Yiling/MobileNavBar/MobileNavBar"; //手機導覽列
 import HomePage from "./pages/Yiling/Home/HomePage"; //引入首頁
 import StoresMap from "./pages/Yiling/StoresMap/StoresMap"; //門市資訊
 import HealthEnCyc from "./pages/Yiling/HealthEnCyc/HealthEnCyc"; //保健百科頁面
@@ -20,7 +20,7 @@ function App() {
     <Router>
       <>
         <Navbar />
-        <MobileNavBar />
+        {/* <MobileNavBar /> */}
         {/* <HomePage /> */}
         {/* 主要內容 */}
         <PortiaAllPage

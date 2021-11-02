@@ -7,6 +7,10 @@ import "slick-carousel/slick/slick-theme.css";
 import "./popularProduct.css";
 //引入熱門商品
 import NewPopularProduct from "../../../components/Yiling/PopularProduct/NewPopularProduct";
+import NewPopularProduct1 from "../../../components/Yiling/PopularProduct/NewPopularProduct1";
+import NewPopularProduct2 from "../../../components/Yiling/PopularProduct/NewPopularProduct2";
+import NewPopularProduct3 from "../../../components/Yiling/PopularProduct/NewPopularProduct3";
+import NewPopularProduct4 from "../../../components/Yiling/PopularProduct/NewPopularProduct4";
 
 export default class PopularProduct extends Component {
   render() {
@@ -57,15 +61,27 @@ export default class PopularProduct extends Component {
       <>
         <div className="bgColorProduct">
           <h1 className="text-divider1">熱門商品</h1>
-          <Slider className="hotSilder" {...settings}>
-            <NewPopularProduct />
-            <NewPopularProduct />
-            <NewPopularProduct />
-            <NewPopularProduct />
-            <NewPopularProduct />
-          </Slider>
-          <div style={{backgroundImage: `url(http://localhost:3000/images/photo/cloud.png)`}}  className="cloud cloud-1"></div>
-          <div style={{backgroundImage: `url(http://localhost:3000/images/photo/cloud.png)`}}  className="cloud cloud-2"></div>
+          <div className="SliderP">
+            <Slider className="hotSilder" {...settings}>
+              <NewPopularProduct />
+              <NewPopularProduct1 />
+              <NewPopularProduct2 />
+              <NewPopularProduct3 />
+              <NewPopularProduct4 />
+            </Slider>
+          </div>
+          <div
+            style={{
+              backgroundImage: `url(http://localhost:3000/images/photo/cloud.png)`,
+            }}
+            className="cloud cloud-1"
+          ></div>
+          <div
+            style={{
+              backgroundImage: `url(http://localhost:3000/images/photo/cloud.png)`,
+            }}
+            className="cloud cloud-2"
+          ></div>
         </div>
       </>
     );

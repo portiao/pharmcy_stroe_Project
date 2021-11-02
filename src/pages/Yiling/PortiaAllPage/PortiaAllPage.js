@@ -14,10 +14,10 @@ import Select_shop from "../Select_Shop/Select_shop"; //處方籤預約領藥
 
 
 
-function App(props) {
+function PortiaAllPage(props) {
   const {setCloseStore}=props
   return (
-    <Router>
+    
       <>
         {/* 主要內容 */}
         <Switch>
@@ -38,8 +38,8 @@ function App(props) {
           </Route>
         </Switch>
       </>
-    </Router>
+    
   );
 }
 
-export default App;
+export default PortiaAllPage;

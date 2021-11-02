@@ -6,14 +6,14 @@ function NewPopularProduct() {
     <>
       <div className="moveProduct">
         <div className="coverNumber">
-          <p>1</p>
+          <p>2</p>
         </div>
         <div className="cardBackColor">
           <div className="forPic">
-            <img src="./images/products/products(15).png"></img>
+            <img src="./images/products/products(37).png"></img>
           </div>
           <div className="forWord">
-            <p>Now Foods,葉黃素, 雙重強度</p>
+            <p>益植酵【睡著酵代謝夜酵素】</p>
           </div>
         </div>
         <br />

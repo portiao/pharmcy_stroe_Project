@@ -10,6 +10,7 @@
   height: auto;
   padding: 0 30px;
   cursor: pointer;
+  max-width: none;
 }
 
 .linkAgainst1:hover {

@@ -88,3 +88,13 @@
    
 }
 
+
+
+/*因為跟柏俞用同一個輪播牆，因此要更改*/
+.SliderP div button {
+    display: none !important;
+}
+
+.portiaMove{
+    display: flex;
+}
